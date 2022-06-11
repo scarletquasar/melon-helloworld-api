@@ -10,6 +10,8 @@ Built with [MelonRuntime](https://github.com/MelonRuntime/MelonRuntime) `v1.1.0`
 
 ## Routes
 
+By default, runs in `localhost:3000`
+
 | Route | Type |
 | ----- | ---- |
 | `/` | `GET` |
