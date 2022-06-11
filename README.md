@@ -9,4 +9,5 @@
 ## Routes
 
 | Route | Type |
+| ----- | ---- |
 | `/` | `GET` |
