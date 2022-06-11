@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "go": "babel --extensions .ts ./src/ --out-dir ./build && npx melon load ."
+  },
+  "dependencies": {
+    "melon-types": "latest"
+  },
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-typescript": "latest"
+  }
+}
