@@ -1,10 +1,15 @@
 const app = http.app()
 
-function helloWorld() {
-    return http.result(200, "Hello World!")
+function get(query: any, headers: Record<string, string>) {
+    return http.result(200, { query, headers })
 }
 
-app.get("/", "helloWorld")
+function post(body: any, query: any, headers: Record<string, string>) {
+    return http.result(200, { body, query, headers })
+}
+
+app.get("/", "get")
+app.post("/", "post")
 app.run()
 
 
