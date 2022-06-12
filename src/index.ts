@@ -1,8 +1,10 @@
 const app = http.app()
 
 function helloWorld() {
-    return http.result(200, 'Hello World')
+    return http.result(200, a.elements().join(" "))
 }
 
-app.get("/", "() => helloWorld()")
+const a = new Enumerable<string>(["Hello", " World!"])
+
+app.get("/", "helloWorld")
 app.run()
