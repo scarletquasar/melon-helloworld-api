@@ -1,15 +1,11 @@
-const app = http.app()
+const app = http.app({
+    name: "test",
+    host: "localhost",
+    port: "3000"
+})
 
-function get(query: any, headers: Record<string, string>) {
-    return http.result(200, { query, headers })
-}
+const getRoute = () => http.result(200, "Hello")
 
-function post(body: any, query: any, headers: Record<string, string>) {
-    return http.result(200, { body, query, headers })
-}
+app.get("/", getRoute)
 
-app.get("/", "get")
-app.post("/", "post")
 app.run()
-
-
