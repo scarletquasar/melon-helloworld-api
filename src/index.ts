@@ -4,7 +4,15 @@ const app = http.app({
     port: "3000"
 })
 
-const getRoute = () => http.result(200, "Hello")
+const getRoute = (queryData: string) => {
+    const query = JSON.parse(queryData)
+
+    if(Object.keys(query).length < 1) {
+        return http.result(500, "Empty query")
+    }
+
+    return http.result(200, query)
+}
 
 app.get("/", getRoute)
 
