@@ -15,4 +15,3 @@ By default, runs in `localhost:3000`
 | Route | Type | Arguments |
 | ----- | ---- | --------- |
 | `/` | `GET` | `any{}` |
-| `/` | `POST` | `any{}` |
